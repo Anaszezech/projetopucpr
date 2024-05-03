@@ -1,15 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4; /* cor de fundo suave */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Courier New', monospace;
 }
 
 .container {
@@ -18,62 +16,42 @@ code {
   align-items: center; 
   justify-content: center; 
   width: 100%;
-  height: 100vh; 
+  min-height: 100vh; /* Usa min-height para garantir que o conteúdo não diminua além da altura da tela */
+  background-color: #fff; /* Fundo claro para o container principal */
 }
 
-.form-group {
+.form-group, .card-header, .card-body {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  max-width: 90%; /* Responsividade */
+  min-width: 300px; /* Garante que não fique muito estreito */
+  margin: 1rem;
   gap: 0.5rem; 
   padding: 1rem; 
   border: 1px solid #ccc; 
   border-radius: 5px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  background-color: #ffffff; /* Fundo branco para destacar */
 }
 
-input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+input, button {
+  padding: 0.8rem;
+  border: 1px solid #ddd; /* Cor de borda mais suave */
+  border-radius: 4px; /* Bordas um pouco mais arredondadas */
 }
 
 button {
-  background-color: #ff6f00;
+  background-color: #007bff; /* Um azul vibrante */
   color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave para o hover */
 }
 
 button:hover {
-  background-color: #ff6f00;
+  background-color: #0056b3; /* Azul um pouco mais escuro ao passar o mouse */
 }
 
-.card-header{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  gap: 0.5rem; 
-  padding: 1rem; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  background-color: #ff6f00;
+.card-header {
+  background-color: #007bff; /* Cor de fundo igual ao do botão */
+  color: #ffffff; /* Texto branco para contraste */
 }
-
-.card-body{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  gap: 0.5rem; 
-  padding: 1rem; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
